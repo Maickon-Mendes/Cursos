@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Cadastro de Imóveis</h3>
+    <form onsubmit="app.addProperty()">
+        <p>
+            <label>Tipo: </label>
+            
+            <select id="tipo">
+                 <option value="Apartamento">Apartamento</option>
+                <option value="Casa">Casa</option>
+            </select>
+        </p>
+        <p>
+            <label>Área: </label>
+            <input type="number" id="area" step="any" min="0" />
+        </p>
+        <p>
+            <input type="checkbox" id="alugado" /> Alugado
+        </p>
+        <button type="submit">Salvar</button>
+
+        <button type="button" onclick="app.cleanForm()">Limpar</button>
+    </form>
+
+    <br>
+
+    <h3>Imóveis cadastrados</h3>
+
+    <ul id="propiedades"></ul>
+
+    
+    <script>
+        //app
+        
+        
+
+        class App { 
+            addProperty(){
+                event.preventDefault()
+                let tipo = document.querySelector("select#tipo").value
+                let area = document.querySelector("input#area").value
+                let alugado = document.querySelector("input#alugado").checked
+                let propriedade = new Propretario(tipo, area, alugado)
+                this.addpropetario(propriedade)
+                this.cleanForm()
+            }
+           addpropetario(propriedade){
+               let listElementos = document.createElement("li")
+               let infoPropriedade = ` Tipo: ${propriedade.tipo} (Área: ${propriedade.area}
+               m²  `
+               if(propriedade.alugado){
+                   let alugadoMark = this.criarAlugudado()
+                   listElementos.appendChild(alugadoMark)
+               }
+               listElementos.innerHTML += infoPropriedade
+               let btnRemover = this.criarBtnRemover()
+               listElementos.appendChild(btnRemover)
+               document.getElementById("propiedades").appendChild(listElementos)
+           }
+           criarAlugudado(){
+            let marcAlugado = document.createElement("span")
+            marcAlugado.style.color = "white"
+            marcAlugado.style.backgroundColor = "red"
+            marcAlugado.innerText = "Alugado"
+            return marcAlugado
+           }
+
+           criarBtnRemover(){
+            let btRemover = document.createElement("button")
+            btRemover.setAttribute("onclick", "app.remove()")
+            btRemover.innerText = "Remover"
+            return btRemover
+           }
+           cleanForm(){
+               document.querySelector("input#area").value = ""
+               document.querySelector("input#alugado").checked = false
+           }
+           remove(){
+               let removerLi = event.target.parentNode
+               document.getElementById("propiedades").removeChild(removerLi)
+           }
+
+        }
+
+
+        //propert
+        class Propretario{
+            constructor(tipo, area, alugado){
+                this.tipo = tipo
+                this.area = area
+                this.alugado = alugado
+            }
+        }
+
+        const app = new App()
+
+        
+    </script>
+</body>
+</html>

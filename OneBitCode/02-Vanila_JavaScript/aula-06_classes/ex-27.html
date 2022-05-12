@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class carrosCompetição{
+            constructor(nome, modalidade, maxvel){
+                this.nome = nome
+                this.modalidade = modalidade
+                this.maxvel = maxvel
+                this.velocidade = 0
+            }
+            acelerar(aceleração){
+                this.velocidade += aceleração
+                if(this.velocidade > this.maxvel){
+                    alert("Velocidade maxima ultrapassada")
+                }
+            }
+        }
+
+        class Corrida extends carrosCompetição{
+            velocidade = 0
+            parar(){
+                alert("velocida = 0 parando carro")
+            }
+        }
+
+        class Rally extends carrosCompetição{
+            velocidade = 0
+            parar(){
+                alert("velocida = 0 parrando carro")
+            }
+        }
+
+        let corrida = new Corrida("Camaro", "corrida", 246)
+        let rally = new Rally("New Fiesta", "rally", 220)
+
+        corrida.acelerar(255)
+        rally.acelerar(180)
+
+        console.log(corrida)
+        console.log(rally)
+
+    </script>
+</body>
+</html>

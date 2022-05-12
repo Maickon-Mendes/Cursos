@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="save()">
+        <p>
+            <label>Nome: </label>
+            <input type="text" id="name">
+        </p>
+
+        <p>
+            <label>Programa em: </label>
+            <select id="ling-programacao">
+                <option value="javascript">javascript</option>
+                <option value="ruby">ruby</option>
+                <option value="python">python</option>
+                <option value="php">php</option>
+            </select>
+        </p>
+        <input type="submit" value="Salvar">
+    </form>
+
+    <script>
+        function save(){
+            event.preventDefault() //não vao executar o comportamento padrão(nesse caso seria atualizar a pagina ao enviar o formulario)
+            let nome = document.querySelector("input#name").value
+            let ligProgramacao = document.querySelector("select#ling-programacao").value
+            alert(`Nome: ${nome}, linguagem de programação ${ligProgramacao}`)
+        }
+    </script>
+</body>
+</html>

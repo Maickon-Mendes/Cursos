@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <select onchange="verificar()">
+        <option value="habilitar">Habilitado</option>
+        <option value="desabilitado">Desabilitado</option>
+        </select>
+    </p>
+
+    <p>
+        <label>Texto</label>
+        <input type="text" id="some-text">
+    </p>
+
+    <p id="menssagem"></p>
+
+    <script>
+        function verificar(){
+            let valorSelec = document.querySelector("select").value
+            if(valorSelec == "desabilitado"){
+                document.getElementById("some-text").disabled = true
+                let elementoP = document.querySelector("p#menssagem")
+                elementoP.innerHTML = "Desabilitado"
+                elementoP.style.color = "white"
+                elementoP.style.backgroundColor = "red"
+            }else{
+                document.getElementById("some-text").disabled = false
+                let elementoP = document.getElementById("menssagem")
+                elementoP.innerText = "Habilitado"
+                elementoP.style.backgroundColor = "green"
+                elementoP.style.color = "white"
+            }
+        }
+    </script>
+</body>
+</html>

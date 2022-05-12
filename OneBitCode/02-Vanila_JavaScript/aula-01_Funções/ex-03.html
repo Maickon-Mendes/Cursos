@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    
+
+    <script>
+        let nomeNave = prompt('Escolha o nome da nave')
+        let velocidadeNave = 0
+        let escolhaProm
+        var novaVel = 0
+
+        function escolher() {
+            let  opcao
+            while (opcao != "1" && opcao != "2" && opcao != "3" && opcao != "4") {
+                opcao = prompt("O que deseja fazer__"+
+                                    "1-Acelerar nave__"+
+                                    "2-Frear Nave__"+
+                                    "3-imprimir dados__"+
+                                    "4-Sair da navegação")
+                
+            }
+            return opcao
+        }
+
+        function Acelerar(){
+            novaVel = velocidadeNave += 5
+            return novaVel
+        }
+
+        function frear(){
+            novaVel = velocidadeNave -= 5
+            if(novaVel < 0){
+                novaVel = 0 
+            }   return novaVel
+        }
+
+        function imprimir(){
+            alert(`dados da nave: Nome: ${nomeNave}. Velocidade: ${novaVel}`)
+        }
+        
+        do {
+            escolhaProm = escolher()
+            switch(escolhaProm){
+                case "1" : Acelerar()
+                break
+                case "2": frear()
+                break
+                case "3": imprimir()
+                break
+                default:
+                    alert("encerando programa de bordo")
+            }
+        }while(escolhaProm != "4") 
+            
+    
+        
+
+</script>
+</body>
+</html>

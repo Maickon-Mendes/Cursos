@@ -1,0 +1,16 @@
+.gray-img{
+  width: 300px;
+  height: 300px;
+  filter: grayscale(100%);
+}
+h4{
+  color: blue;
+}
+
+.corPrarag{
+  color: purple;
+}
+
+.color-img{
+  width: 300px;
+}

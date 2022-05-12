@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <p>
+            <label>Nome: </label>
+            <input type="text" name="Lnome" onchange="digaPrimeiroNome(this)">
+        </p>
+
+        <p>
+            <label>Sobrenome: </label>
+            <input type="text" name="Lsobrenome" onchange="digaSobrenome()" >
+        </p>
+    </form>
+
+    <script>
+
+        //formas de armazenar valores
+        function digaPrimeiroNome(Pnome){
+            alert(`Meu nome é ${Pnome.value}`)
+        }
+
+
+        function digaSobrenome(){
+            console.log(event)//event armazena o ultimo evento chamado no dom
+            alert(event.target.value) 
+        }
+    </script>
+</body>
+</html>

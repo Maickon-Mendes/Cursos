@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    
+    <script>
+
+class Corrida {
+constructor(carro, capTen, qanCon, pneu){
+this.carro = carro
+this.capTen = capTen
+this.qanCon = qanCon
+this.pneu = pneu
+}
+
+porcetagemCombustivel(){
+    return this.qanCon * 100 / this.capTen
+}
+
+checPneus(){
+    return this.pneu * 0.9
+}
+
+}
+
+let camaro = new Corrida("camaro", 50 , 30, 100)
+let mustang = new Corrida("mustang", 110, 55, 40)
+let audiTT = new Corrida("audiTT", 50, 35, 80)
+
+
+
+ class ignição {
+     constructor(car){
+         this.car = car
+     }
+  
+     
+
+     checComb(){
+        let carroLiberado = this.car.porcetagemCombustivel()
+        return new Promise((resolve, reject) =>{
+            if(carroLiberado >= 30){
+                resolve(carroLiberado)
+            }else{
+                reject(`Carga em apenas ${carroLiberado}`)
+            }
+        })
+     }
+
+     testPneu(){
+         return new Promise((resolve, reject)=>{
+            let capPneu = this.car.checPneus() * 2
+            if(capPneu >= 100){
+                resolve(capPneu)
+                
+            }else{
+                reject("Pneus estão com curta durabilidade")
+            }
+         })
+     }
+     
+
+     checPneu(){
+        let p = this.car.checPneus()
+        return new Promise((resolve, reject)=>{
+            
+            if( p > 120){
+                reject("pneu em sobrecarga")
+            }
+            else{
+                resolve(p)
+            }
+        })
+
+     }
+
+     ligar(){
+        let checagemCom = this.checComb()
+        let checagemPneu = this.testPneu()
+        Promise.all([checagemCom, checagemPneu]).then((verdadeiro)=>{
+            return checPneu(verdadeiro[1])
+        }).then(novoPneu =>{
+            this.car.checPneus() = novoPneu
+            console.log("partida auto")
+        }).catch(falso=>{
+            console.log(`partida não autorizada ${falso}%`)
+        })
+     }
+
+     
+ }
+
+let ligarcamaro = new ignição(camaro)
+let ligarmustang = new ignição(mustang)
+let ligaraudiTT = new ignição(audiTT)
+
+ligarcamaro.ligar()
+ligarmustang.ligar()
+ligaraudiTT.ligar()
+
+       
+    </script>
+</body>
+</html>

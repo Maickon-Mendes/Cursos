@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<button onclick="criar()">Criar novo número</button>
+<button onclick="imprimir()">imprimir telefone</button>
+    <form id="ListaTel">
+        
+        <p>
+            <label>Telefone 1:</label>
+            <input type="text" name="NumeroTelefone">
+        </p>
+    </form>
+    
+
+    <script>
+        function criar(){
+            const ListaTelefonica = document.querySelector("form#ListaTel")
+            const novoParg = ListaTelefonica.children[0].cloneNode(true)
+            const posiLabel = ListaTelefonica.children.length+1
+            novoParg.querySelector("label").innerText = "Telefone" + posiLabel +": "
+            ListaTelefonica.appendChild(novoParg)
+        }
+
+        function imprimir(){
+            const mensagem = ""
+            const lista = document.querySelectorAll("input[name='NumeroTelefone]")
+            lista.forEach((NumeroTelefone, index) => {
+                mensagem = `Telefone ${(index + 1)}: ${NumeroTelefone.value}\n`
+            })
+            alert(mensagem)
+        }
+
+
+
+    </script>
+</body>
+</html>

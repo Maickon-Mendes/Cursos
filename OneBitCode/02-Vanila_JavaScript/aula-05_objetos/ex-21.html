@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let nomeNave = prompt("Escola um nome para sua nave")
+        let tipo = prompt("Escolha o tipo da sua nave")
+        let maxVel = Number(prompt("Qual a velocidade maxima da sua nave"))
+        let escolhaProm
+        let InfoNave = {
+            velocidade: 0,
+            aceleracao : function(acelerar){
+                this.velocidade += acelerar
+                if(InfoNave.velocidade > maxVel){
+                    alert('Limite de velocidade ultrapassado')
+                }
+            }
+        }
+        function acele(){
+            InfoNave.aceleracao(20)
+            
+        }
+        function imprimir(){
+            alert(`Nome: ${nomeNave}\n Tipo Nave: ${tipo}\n maxima velocidade da nave: ${maxVel}\n velocidade: ${InfoNave.velocidade}`)
+        } 
+
+        function Escolha(){
+            let opcao
+            while (opcao != "1" && opcao != "2" && opcao != "3") {
+                opcao = prompt("escolha a opção desejada \n" +
+                                "1- Acelerar20/s\n"+
+                                "2-Parar")
+            } 
+            return opcao
+        }
+            do {escolhaProm = Escolha()
+            switch(escolhaProm){
+            case "1": acele()
+            break
+            case "2" : imprimir()
+            break
+            default:
+                alert('Opção invalida')
+        }
+             }while (escolhaProm != 2) 
+        
+    </script>
+</body>
+</html>

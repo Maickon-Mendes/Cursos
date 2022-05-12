@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*setTimeout(() => {
+            console.log("executar depois de  5 segundos")
+        },5000)*/
+
+        let idTimeOut = setTimeout(() => {
+            console.log("executar depois de  5 segundos")
+        },5000)
+
+        clearTimeout(idTimeOut) // parrar a execução
+
+        /*setInterval(() => {
+            console.log("executar de 5 em  5 segundos")
+        },5000)*/
+
+        let segundos = 0
+        let idInterval = setInterval(() => {
+            segundos += 2
+            console.log("executar de 2 em  2 segundos")
+            if(segundos >= 10) clearInterval(idInterval)
+        },2000)
+
+    
+    </script>
+</body>
+</html>

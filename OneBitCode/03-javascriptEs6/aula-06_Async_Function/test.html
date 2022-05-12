@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let espaçonave = {
+            cadencia: 6,
+            mira: [20, 15, 7],
+            fogo: false
+        }
+
+        async function mirar(x, y, z){
+            if(z > 90){
+                return  Promise.reject("Angulo invalido para arma")
+            }
+            espaçonave.mira = [x, y, z]
+            return [x, y, z]
+        }
+
+        async function atirar(x,y,z){
+             espaçonave.fogo = true
+            return [x, y, z]
+        }
+
+        async function verificar(x, y, z){
+            try{ 
+            let cordenada = await mirar(x, y, z)
+                console.log(`Codenadas para mirar ${cordenada[0]} ${cordenada[1]} ${cordenada[2]}`)
+
+                let abrirFogo = await atirar(...cordenada) 
+                console.log(`Começando a atirar nas coordenadas ${abrirFogo[0]} ${abrirFogo[1]} ${abrirFogo[2]}`)
+        }catch(erro){
+            console.log(erro)
+        }
+    }
+
+    console.log(verificar(10, 20, 30))
+
+
+
+    </script>
+</body>
+</html>

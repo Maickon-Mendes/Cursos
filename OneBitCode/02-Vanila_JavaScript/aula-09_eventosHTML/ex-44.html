@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <form>
+        <p>
+            <label>Nome: </label>
+            <input type="text" id="name">
+        </p>
+        <p>
+            <label>Cor primária: </label>
+            <select id="color">
+                <option value="yellow">Amarelo</option>
+                <option value="blue">Azul</option>
+                <option value="red">Vermelho</option>
+            </select>
+        </p>
+
+        
+        <div class="cor">
+                <label>Gosta de programar?</label>
+                <input type="radio" value="sim" id="like-programming">Sim
+                <input type="radio" value="não" id="like-programming">Não
+            
+        </div>
+        <p>
+            <label>Conhecimentos em programação web: </label>
+
+            <input type="checkbox" value="html" id="developer-options">HTML
+
+            <input type="checkbox" value="javascript" id="developer-options">Javascript       
+
+            <input type="checkbox" value="css" id="developer-options">CSS
+
+            <input type="checkbox" value="express" id="developer-options">Express
+
+        </p>
+        <button type="button" onclick="showinfo()">Mostrar informações
+        
+    </form>
+
+
+    <script>
+        function showinfo(){
+            let nome = document.querySelector("input#name").value
+            let corFavorita = document.querySelector("select#color Option:checked").text
+            let likeProgram = document.querySelector("input#like-programming:checked").value
+            let optionDesenv = document.querySelectorAll("input#developer-options:checked")
+            let optionValue = []
+
+            optionDesenv.forEach(Element =>{optionValue.push(Element.value)})
+
+            let optionChecked = optionValue.join(", ")
+            
+            alert(`Nome: ${nome}\n Cor Primaria: ${corFavorita}\n Gosta de programar? ${likeProgram}\n Conhecimentos em programação Web: ${optionChecked}`)
+        }
+
+
+    </script>
+</body>
+</html>

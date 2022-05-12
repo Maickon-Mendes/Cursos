@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    
+    <script>
+        class Corrida {
+    constructor(carro, litragemTanque, quantidadeCombustivel){
+    this.carro = carro
+    this.litragemTanque = litragemTanque
+    this.quantidadeCombustivel = quantidadeCombustivel
+    }
+
+    porcetagemCombustivel(){
+        return this.quantidadeCombustivel * 100 / this.litragemTanque
+    }
+}
+
+let camaro = new Corrida("camaro", 50 , 40)
+let mustang = new Corrida("mustang", 55, 35)
+let audiTT = new Corrida("audiTT", 50, 35)
+
+
+
+ class ignição {
+     constructor(car){
+         this.car = car
+     }
+     ligar(){
+        this.checagem().then(carroLiberado => {
+            console.log(`(${this.car.carro}) Partida autorizada: carga atual em ${carroLiberado}%.`)
+        }).catch(()=>{
+            console.log(`(${this.car.carro}) Partida não autorizada: carga em apenas ${carroLiberado}%.`)
+        })
+     }
+
+     checagem(){
+        return new Promise((resolve, reject) =>{
+            let carroLiberado = this.car.porcetagemCombustivel()
+            if(carroLiberado >= 30){
+                resolve(carroLiberado)
+            }else{
+                reject(carroLiberado)
+            }
+        })
+     }
+ }
+
+ let ligarcamaro = new ignição(camaro)
+let ligarmustang = new ignição(mustang)
+let ligaraudiTT = new ignição(audiTT)
+
+ligarcamaro.ligar()
+ligarmustang.ligar()
+ligaraudiTT.ligar()
+
+       
+    </script>
+</body>
+</html>

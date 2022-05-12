@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nomeNave =prompt("Escolha um nome para a sua nave")
+        let velNave = 10
+        let escolhaPiloto
+        function escolher(){
+            let option
+            while(option != "1" && option != "2" && option != "3" && option != 4){
+                option = prompt("Escolha as seguintes opções "+
+                                        "1-acelerar em 20 km/s "+
+                                        "2-frear em 20 km/s "+
+                                        "3-Imprimir os dados da nave "+
+                                        "4-Sair da navegação")
+            }
+            return option
+        }
+
+        function acelerar(){
+            let novaVel = velNave += 20
+            return novaVel
+        }
+
+        function frear(){
+            let novaVel =  velNave -=20
+            if(velNave < 0){
+                velNave = 0 
+            }
+            return novaVel
+        }
+
+        function imprimir(){
+            alert(`Dados da nave. Nome da Nave: ${nomeNave}. Velocidade da Nave: ${velNave}.`)
+        }
+
+        do{
+            escolhaPiloto = escolher()
+            switch(escolhaPiloto){
+                case "1": acelerar()
+                break
+                case "2": frear()
+                break
+                case "3":imprimir()
+                break
+                default:
+                    alert("Saindo da estrutura de repetição")
+            }
+        }while (escolhaPiloto != "4") 
+            
+        
+    </script>
+</body>
+</html>

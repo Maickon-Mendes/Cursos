@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="bt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="addPhone()">Novo telefone</button>
+    <button onclick="printPhone()">imprimir telefone</button>
+    <br>
+    <form id="formuTelefones" >
+        <p>
+            <label>Telefone 1: </label>
+            <input type="text" name="numeTelefone">
+        </p>
+    </form>
+
+
+    <script>
+        function addPhone(){
+            const listaTelefone = document.querySelector("form#formuTelefones")
+            const novoTel = listaTelefone.children[0].cloneNode(true)  //clone o elemento (true) e os filhos dele  obs se fosse false seria só o elemento
+            const posFone = listaTelefone.children.length + 1
+            novoTel.querySelector("label").innerText = "telefone " + posFone + ": "
+            listaTelefone.appendChild(novoTel)//append adicionar 
+        }
+
+
+        function printPhone(){
+            let menssagem = ""
+            const phones = document.querySelectorAll("input[name='numeTelefone']")
+            phones.forEach((numeTelefone, index) =>{ 
+                menssagem += "Telefone "+ (index + 1) + ", " + numeTelefone.value
+            })
+            alert(menssagem)
+        }
+
+       
+        //nomear o formulario
+        //criar un novo elemento com os filhos do formulario
+        //criar uma nova area label
+        //criar o filho no formulario
+
+
+
+
+        //criar variavel para mensagem
+        //pegar todos os itens da lista
+        //percorer esses numeros com forEatch
+        //arrou function (input do numero, index)
+        //menssagem 
+       
+    </script>
+</body>
+</html>

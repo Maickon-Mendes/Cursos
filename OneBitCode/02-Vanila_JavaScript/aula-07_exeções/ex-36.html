@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // cláusula throw
+
+class arma{
+    constructor(nome) {
+        this.nome = nome
+        this.munição = 5
+    }
+    atirar(){
+        if(this.munição > 0){
+        console.log("Bang")
+        this.munição -= 1
+    }else{
+        throw new Error(`Arma ${this.nome} sem munição`)//vai lançar um erro controlado no console do Chrome
+    }
+    }
+}
+
+let scar = new arma("scar", 10)
+scar.atirar()
+scar.atirar()
+scar.atirar()
+scar.atirar()
+scar.atirar()
+scar.atirar()
+console.log(scar)
+    </script>
+    
+</body>
+</html>
+

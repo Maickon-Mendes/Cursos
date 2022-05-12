@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let aeronaves = [["fenix", 4, true], ["golias", 15, true], ["helmet", 6 , true], ["elemantal", 3, false], ["darvin", 20, true]]
+
+        let filtro = aeronaves.filter(elemento => { return elemento[1] >= 9}).map(elemento => { return elemento [0]})
+
+        let pendende = aeronaves.findIndex(elemen => {return elemen[2] == 0})
+
+        let letMaisc = aeronaves.map(function(uper){
+        let saveAlt = uper[0].toUpperCase()
+        return saveAlt
+    })
+
+    alert(`espaço naves com mais de 9 tripulantes ` + filtro.join(", ")) 
+    alert(`plataforma com o processo de embarque ${pendende}`)
+    alert(`Espaço naves destacadas ` + letMaisc.join(", "))
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="button" value="clique" onclick="clicar()">
+<p>
+    <input type="text" name="focus-text" onclick="clicar()" placeholder="foque">
+</p>
+
+<p>
+    <input type="text" name="blur-text" onblur="blurme()" placeholder="borrar">
+</p>
+
+<p>
+    <input type="text" name="mudar-text" onchange="mudarme()" placeholder="mudar">
+</p>
+
+<p onmouseover="pasmouse()">passe o mouse </p>
+
+
+    <script>
+
+        //lembrar de estudar sobre os eventos do js da aula eventos do html no js intermediario
+function clicar(){
+    alert("clicou")
+}
+
+function focusme(){
+    alert("focou")
+}
+
+function clicar(){
+    alert("clicou")
+}
+
+function blurme(){
+    alert("borrou")
+}
+
+function mudarme(){
+    alert("mudou")
+}
+
+function pasmouse(){
+    alert("passou")
+}
+    </script>
+</body>
+</html>

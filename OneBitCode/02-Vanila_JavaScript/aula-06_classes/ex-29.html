@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+class Spaçonave{
+    constructor(nome, capaMaxima, maxVel) {
+        this.nome = nome
+        this.capaMaxima = capaMaxima
+        this.maxVel = maxVel
+        this.velAtual = 0
+    }
+
+
+acelerar(aceleração){
+    this.velAtual += aceleração
+    if(this.velAtual > this.maxVel){
+        console.log("velocidade máxima ultrapassada")
+    }
+}
+}
+
+class SpaçonaveTransport extends Spaçonave {
+    acelerar(){
+        console.log("Naves de transporte só aumentam em um km por segundo")
+    this.velAtual += 1
+}
+}
+
+class naveTransport extends Spaçonave{
+    constructor(nome, maxqtde, maxVel, maxCarga){
+        this.maxCarga 
+        super(nome, capaMaxima, maxVel)     //super()Ta se referindo a super class que é a primeira a ser declada
+               
+    }
+    acelerar(aceleração){
+        aceleração /= 2
+        console.log(`incrementando velocidade em ${aceleração} km/s`)
+        super.acelerar(aceleração)
+    }
+}
+
+let nave = new naveTransport("transportadora", 4, 100, 400)
+
+console.log(nave)
+nave.acelerar(210)
+
+
+
+/*class Spaçonave{
+    constructor(nome, capaMaxima, maxVel) {
+        this.nome = nome
+        this.capaMaxima = capaMaxima
+        this.maxVel = maxVel
+        this.velAtual = 0
+    }
+
+
+acelerar(aceleração){
+    this.velAtual += aceleração
+    if(this.velAtual > this.maxVel){
+        console.log("velocidade máxima ultrapassada")
+    }
+}
+}
+class naveTransport extends Spaçonave{
+    constructor(nome, capaMaxima, maxVel, maxPeso){
+        super(nome, capaMaxima, maxVel)     //super()Ta se referindo ao construtor da primeira class declarada
+        this.maxPeso = maxPeso       
+    }
+    acelerar(aceleração){
+        aceleração /= 2
+        console.log(`incrementando velocidade em ${aceleração} km/s`)
+        super.acelerar(aceleração)
+    }
+}
+
+let nave = new naveTransport("transportadora", 4, 100, 400)
+
+console.log(nave)
+nave.acelerar(210)*/
+    </script>
+    
+</body>
+</html>
+

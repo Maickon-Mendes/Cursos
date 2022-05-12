@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <select id="select-option">
+            <option>Opção 01</option>
+            <option>Opção 02</option>
+        </select>
+    </form>
+    <script>
+        document.querySelector("select#select-option").addEventListener("change", function() {
+            alert(event.target.value)
+        })
+    </script>
+</body>
+</html>

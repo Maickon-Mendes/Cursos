@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Registro de Pokemons</h3>
+    
+    <form id="Pokedex">
+        <p>
+            <label>nome: </label>
+            <input type="text" id="nome">
+        </p>
+        <p>
+            <label>Poder: </label>
+            <input type="text" id="poder">
+        </p>
+        <p>
+            <label>Tipo: </label>
+            <input type="text" id="tipo">
+        </p>
+        <p>
+            <label>Ataque especial: </label>
+            <input type="text" id="ataqueEspecial">
+        </p>
+        <button type="button" onclick="salvar()">Salvar</button>
+    </form>
+
+
+    <ul id="listaPokemon"></ul>
+
+    <script>
+        function salvar(){
+            const nome = document.querySelector("input#nome").value
+            const poder = document.querySelector("input#poder").value
+            const tipo = document.querySelector("input#tipo").value
+            const ataqueEspecial = document.querySelector("input#ataqueEspecial").value
+
+            let novoPokemon = document.createElement("li")
+            novoPokemon.innerText = `Pokemon: ${nome}\n Poder: ${poder}\n tipo: ${tipo}\n Ataque Especial: ${ataqueEspecial} \n `
+
+            let removerItem = document.createElement("button")
+            removerItem.type = "button"
+            removerItem.innerText = "Remover"
+            removerItem.setAttribute("onclick", "removItem(this)")
+
+            novoPokemon.appendChild(removerItem)
+
+            document.getElementById("listaPokemon").appendChild(novoPokemon)
+        }
+
+        function removItem(button){
+            let removLista = button.parentNode
+            document.getElementById("listaPokemon").removeChild(removLista)
+        }
+
+    </script>
+
+    
+</body>
+</html>
