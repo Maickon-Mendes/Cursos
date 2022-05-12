@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mwnu Responsivo</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: helvetica;
+        }
+
+        .clear{
+            clear: both;
+        }
+
+        .container{
+            padding: 0 2%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        header{
+            padding: 10px 0;
+            background-color: #1976d2;
+        }
+
+        div.logo{
+            float: left;
+            color: white;
+        }
+
+        nav.menu-desktop{
+            float: right;
+        }
+
+        nav.menu-desktop > ul{
+            top: 4px;
+            list-style: none;
+            position: relative;
+            list-style-type: none;
+        }
+
+        nav.menu-desktop > ul > li{
+            font-size: 14px;
+            padding: 0 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        nav.menu-desktop > ul > li:hover > ul.submenu-desktop{
+            display: block;
+        }
+
+        nav.menu-desktop a{
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+        }
+
+        nav.menu-desktop a:hover{
+            text-decoration: underline;
+        }
+
+        ul.submenu-desktop{
+            top: 22px;
+            left: 8px;
+            display:none;
+            width: 300px;
+            padding: 8px 0;
+            list-style-type: none;
+            background-color: #1976d2 ;
+        }
+
+        ul.submenu-desktop li{
+            padding-top: 8px;
+        }
+
+        nav.mobile{
+            float: right;
+            display: none;
+        }
+        .mobile img{
+            width: 30px;
+            height: 30px;
+        }
+
+        nav.mobile .teste{
+            display: none;
+            position: absolute;
+            top: 53px;
+            left: 70%;
+            background-color: #1976d2;
+            width: 100%;
+            list-style-type: none;
+        }
+
+        nav.mobile .teste .test{
+            width: 100%;
+            display: inline-block;
+            padding: 8px 2%;
+            list-style-type: none;
+        }
+
+        nav.mobile ul a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+
+        }
+
+        @media screen and (max-width:768px){
+
+            nav.mobile{
+            display: block;
+        }
+
+        nav.menu-desktop{
+            display: none;
+        }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+        <div class="logo">
+            <h2>logomarca</h2>
+        </div>
+            <nav class="menu-desktop">
+                <ul>
+                    <li >
+                        <a href="">Home</a>
+                        <ul class="submenu-desktop">
+                            <li><a href="">sessão1</a></li>
+                            <li><a href="">sessão2</a></li>
+                            <li><a href="">sessão3</a></li>
+                        </ul>
+                    </li>
+                     <li>
+                         <a href="">Sobre</a>
+                         <ul class="submenu-desktop">
+                            <li><a href="">sessão1</a></li>
+                            <li><a href="">sessão2</a></li>
+                            <li><a href="">sessão3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Contato</a>
+                        <ul class="submenu-desktop">
+                            <li><a href="">sessão1</a></li>
+                            <li><a href="">sessão2</a></li>
+                            <li><a href="">sessão3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+        <nav class="mobile">
+            <img src="imagens/menu.png" alt="">
+            <ul class="teste">
+                <li class="test">
+                    <a href="">home</a>
+                    <ul class="submenu-mobile">
+                        <li><a href="">sessão11</a></li>
+                        <li><a href="">sessão2</a></li>
+                        <li><a href="">sessão3</a></li>
+                    </ul>
+                </li>
+
+                <li class="test">
+                    <a href="">Sobre</a>
+                    <ul class="submenu-mobile">
+                        <li><a href="">sessão11</a></li>
+                        <li><a href="">sessão2</a></li>
+                        <li><a href="">sessão3</a></li>
+                    </ul>
+                </li>
+
+                <li class="test">
+                    <a href="">contato</a>
+                    <ul class="submenu-mobile">
+                        <li><a href="">sessão1</a></li>
+                        <li><a href="">sessão2</a></li>
+                        <li><a href="">sessão3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="clear"></div>
+    </div>
+    </header>
+    <script src="jquerry"></script>
+    <script>
+        $('nav.mobile img').click(function(){
+            //alert('clicado')
+            $(this).parent().find('ul:not(.submenu-desktop)').slideToggle()
+        })
+    </script>
+</body>
+</html>
+                   

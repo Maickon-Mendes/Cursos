@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .header{
+            width: 100%;
+            height: 40vh;
+            max-height: 1280px;
+            overflow: hidden;
+            position: relative;
+        }
+        header video{
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            transform: translateY(50%);/**/
+        }
+        .overlay{
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            transition: 0.7s;
+        }
+        .overlay:hover{
+            background-color: rgba(0, 0, 0, 0.0);
+        }
+        .overlay h2{
+            text-align: center;
+            color: white;
+            font-size: 55px;
+        }
+    </style>
+</head>
+<body>
+  <!--<iframe src="https://www.youtube.com/watch?v=lgAvpz-98yY" frameborder="0"></iframe><br>não funcionou aprender como faz-->
+<div class="header" >
+<div class="overlay">
+    <h2>Meu site</h2>
+</div>
+ <video src="imagens/tick.mp4" autoplay muted ></video>
+</div>
+     <!--<audio src=""></audio>para adicionar audio--> 
+</body>
+</html>

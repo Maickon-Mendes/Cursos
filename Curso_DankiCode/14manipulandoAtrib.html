@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a[href='www.google.com']{/*usado para estilizar apenas esse item em expecifico ou podemos deixar ate sem o (a)*/
+            background-color: yellow;
+        }
+        a[href*='youtube'], [href*='danki']{/*usar o * para estilização dos itens que tem o nome que esta em exemplos*/
+            background-color: rgb(122, 122, 201);
+            text-decoration: none;
+            color: black;
+        }
+        /*a[attr~="google"] Também podemos usar desta forma */
+        /*a[attr*='goog'] Também podemos usar desta forma que procura ate as letras */
+
+        input[type=text]{
+            background-color: lightgrey;
+        }
+        input[type=submit]{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <a href="www.google.com">link para o google</a><br>
+    <a href="www.youtube.com">link do youtube</a><br>
+    <a href="www.danki.com.br">link Danki code</a> <br>
+      <input type="text" name="idade" id="digite sua idade"> 
+      <input type="submit" value="digite um texto">
+</body>
+</html>

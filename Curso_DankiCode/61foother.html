@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,body{
+            height: 100%;
+        }
+
+        .side-menu{
+            width: 200px;
+            height: 150px;
+            background-color: gray;
+        }
+
+        .menu-item{
+            position: relative;
+        }
+
+        .menu-item a{
+            padding: 10px 20px;
+            display: block;
+            border-bottom: 1px solid red;
+        }
+
+        .sub-menu{
+            display: none;
+            position: absolute;
+            min-width: 100px;
+            padding: 8px 12px;
+            background-color: lightgray;
+            left: 195px;
+            top: 0;
+            z-index: 1;
+        }
+
+        .menu-item:hover .sub-menu{
+            display: block;
+        }
+
+        .box{
+            width: 100%;
+            height: 100%;
+            background-color: blue;
+        }
+
+        .box2{
+            width: 30%;
+            height: 100%;
+            background-color: chocolate;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="side-menu">
+        <div class="menu-item">
+            <a href="">Home</a>
+            <div class="sub-menu">
+                <a href="">Link1</a>
+                <a href="">link2</a>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <a href="">Sobre</a>
+            <div class="sub-menu">
+                <a href="">Link5</a>
+                <a href="">link2</a>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <a href="">Contato</a>
+            <div class="sub-menu">
+                <a href="">Link1</a>
+                <a href="">link2</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

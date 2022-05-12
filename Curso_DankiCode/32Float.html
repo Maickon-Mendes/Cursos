@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;/*nescessario para os 33.3% funcionem*/
+        }
+        html,body{
+            height: 100%;/*altura*/
+        }
+        .container{
+            width: 98%;/*largura*/
+            max-width: 1200px;/*largura maxima*/
+            margin: 0 auto;
+            background-color: lightgray;
+        }
+        .box{
+            width: 33.33%;/*largura*/
+            height: 300px;/*altura*/
+            background-color: lightblue;
+            float: left;
+            border: 1px solid black;
+        }
+
+        @media screen and (max-width:768px) {/*Quando o tamnho da minha tela for de 768px, quero que cada box tenha uma largura de 40% e que o container fiquie alinhado no centro*/
+            .container{
+                text-align: center;
+            }
+            .box{/*largura*/
+                width: 40%;
+                float: none;/*não funciona a centralização com o float, por isso devemos aplicar  o display inline-block*/
+                display: inline-block;
+                margin-bottom: -4px;/*o display inline block cria um espaçamento automatico,por isso deve diminuir 4 px para  as divs se encostarem*/
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div><div class="box"></div></div><!--as divs cega são para as box se alinharem uma em cima da outra-->
+    <div><div class="box"></div></div>
+    <div><div class="box"></div></div>
+</div>
+</body>
+</html>

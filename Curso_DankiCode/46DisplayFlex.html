@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        main{
+            align-items: center;/*manira de centralizar as box*/
+            display: flex;/*fax o conteudo se comportar como uma tabela (calcula os espaços das box deixando um do lado do outro)*/
+            flex-direction: row-reverse;/*para os elementos ficarem o reverso do que etão no html o column deixa o testo como se fossem colunas*/
+        }
+
+        aside{
+            order: 2;/*maneira de ordernar as coisas como desejado*/
+            background-color: lightgray;
+            padding: 30px;
+
+        }
+
+        article{
+            order: 1;/*maneira de ordernar as coisas como desejado*/
+            padding: 30px;
+            background: gray;
+        }
+       
+    </style>
+</head>
+<body>
+   <main>
+       <aside>
+           <h2>Artigos relacionados</h2>
+           <ul>
+               <li>Artigo 1</li>
+               <li>Artigo 2</li>
+           </ul>
+       </aside>
+
+       <article>
+           <h2>Meu titulo</h2>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nobis veritatis doloremque, ducimus error exercitationem, nemo consequatur molestiae natus possimus, consectetur ut expedita. Cupiditate facilis a neque adipisci excepturi. Veritatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nobis pariatur quisquam iste porro tenetur, temporibus officiis cum atque ratione accusamus reprehenderit excepturi numquam, facilis cupiditate vero aut veniam earum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quod dolore unde ab deleniti? Tenetur esse odit similique neque debitis. Ratione explicabo modi molestias eveniet esse in aliquid a dolore?</p>
+       </article>
+   </main>
+</body>
+</html>

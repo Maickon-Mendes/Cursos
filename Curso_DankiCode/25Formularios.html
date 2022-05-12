@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        html,body{
+            height: 100%;
+        }
+            form{
+                width: 96%;
+                max-width: 600px;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            form fieldset{
+
+                padding: 20px 40px;
+                border: 1px solid blue;
+            }
+            form legend{
+                text-align: left;
+                font-size: 17px;
+                color: gray;
+            }
+            form input[type=text]{
+                display: inline-block;
+                margin-top: 30px;
+                width: 80%;
+                padding: 10px 15px;
+            }
+
+            form input[type=text]:focus, form select:focus, form textarea:focus{
+                outline: 0;/*usado para o que ja foi digitado não fique salvo como sujestão*/
+            }
+            form select{
+                width:calc(80% + 26px);
+                margin-top: 30px;
+                padding: 10px 13px;
+                display: inline-block;
+                border: 1px solid rgb(135, 135,135);
+                color: rgb(135, 135,135);
+            }
+           
+            form h2{
+                margin-top: 20px;
+                color: rgb(135, 135,135);
+            }
+            .input{
+                display: inline-block;
+                margin-top: 20px;
+                text-align: left;
+                
+            }
+            .input span{
+                margin-left: 13px;
+                font-size: 16px;
+                color: rgb(130, 130,130);
+            }
+            form select option[disabled]{/*para mudar a cor do 'QUAL E A SUA IDADE'*/
+                color: red;
+            }
+            form select option:nth-of-type(3){/*para mudar a cor do item dentro da caixa de texto*/
+                color: red;
+            }
+            form input[type=submit]{
+                font-family: Arial, Helvetica, sans-serif;
+                margin-top: 30px;
+                width: 80px;
+                height: 25px;
+                border: 0;
+                border: 1px solid gray;
+                background-color: gray;
+                color: white;
+                cursor: pointer;/*para virar uma mãozinha enquanto o põe em cima*/
+            }
+            form textarea{
+                border: 1px solid lightgray;
+                width: 80%;
+                margin-top: 30px;
+                padding: 10px 13px;
+                resize: none;/*indica que o cliente não podera mexer no tamanho da tela*/
+            }
+            
+
+    </style>
+</head>
+<body>
+    <form action="Https://formsubmit.co/maickonmmendes@gmail.com" method="post">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="http://127.0.0.1:5502/htmlCss/25Formularios.html">
+        <fieldset><!--usado para criar um grupo de formulario-->
+            <legend>Meu formulario</legend>
+            <input type="text" name="nome" id="nome" placeholder="Digite o seu nome"><br>
+            <input type="text" name="e-mail" id="e-mail" placeholder="Digite o seu e-mail">
+            <div>
+                <select name="lista" id="lista">
+                    <option disabled selected>qual a sua idade</option>
+                    <option value="20">20+</option>
+                    <option value="25+">25+</option>
+                    <option value="40+">40+</option>
+                </select>
+                <div class="input">
+                    <div>
+                    <h2>Qual a sua cidade</h2>
+                    </div>
+
+                    <div>
+                    <input type="radio" name="cidade" id="cidade" value="Floriánopolis"><span>Floriánopolis</span><!--para funcionar a celeção em apenas um no site todos os inputs devem ter o memso nome exemplo id=cidade-->
+                    </div>
+                    <div>
+                    <input type="radio" name="cidade" id="cidade" value="São Paolo"><span>São Paolo</span>
+                    </div>
+                    <div>
+                    <input type="radio" name="cidade" id="cidade" value="rio de janeiro"><span>rio de janeiro</span>
+                    </div>
+
+                    <div>
+                        <h2>O que vocçe gosta de comer</h2>
+                    </div>
+                    <div>
+                        <div><input type="checkbox" name="Fruta" id="Fruta"><span>Fruta</span></div>
+                       <div><input type="checkbox" name="Fast Food" id="Fast Food"><span>Fast Food</span></div> 
+                        <div><input type="checkbox" name="Salada" id="Salada"><span>Salada</span></div>
+
+                    </div>
+                </div>
+            </div>
+                    <div>
+                        <textarea name="Observação" placeholder="possui alguma observação?" ></textarea><!--não usar espaço pois isso aparece na pagina-->
+                    </div>
+                    <div>
+                        <a href=""><input type="submit" name="ação"value="Enviar"></a>
+                       
+
+                    </div>
+        </fieldset>
+        
+    </form>
+</body>
+</html>

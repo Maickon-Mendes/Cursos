@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;/*nescessario para os 33.3% funcionem*/
+        }
+        html,body{
+            height: 100%;/*altura*/
+        }
+        .box{
+            width: 33.33%;/*largura*/
+            height: 300px;/*altura*/
+            background-color: lightblue;
+            float: left;
+            border: 1px solid black;
+        }
+        @media screen and (max-width: 768px) and (max-height: 500px){/*combinação entre largura e altura*/
+            .box{
+                width: 100%;
+            }
+        }
+        /* @media screen and (max-width: 768px) , scrren and (max-height: 500px){
+        .box{
+                width: 100%;
+            }
+        } vai mudar a posição dos elementos conforme almentamos ou diminuimos o tamanho da viwport*/
+
+
+            /* @media screen and (maxaspect-ratio: 2/1 ){
+        .box{
+                width: 100%;
+            } 
+        } vai mudar a posição dos elementos quando a largura da tela for o dobro da altura*/
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</body>
+</html>

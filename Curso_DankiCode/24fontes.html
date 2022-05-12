@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes</title>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
+
+       
+        h2{
+            font-weight: 800;
+            font-family: 'Open sans';/*Fontes importadas do google*/
+        }
+         @font-face {/*Fontes Baixadas*/
+             font-family: 'abrir Sans' ;
+             src: url(00Fontes/OpenSans-SemiBold.ttf);
+         }
+         @font-face {/*Fontes Baixadas*/
+             font-family: 'nova sans';
+             src: url(00Fontes/OpenSans-Italic.ttf);
+         }
+        
+        p{
+            font-family: 'abrir sans';
+        }
+        h1{
+            font-family: 'nova sans';
+        }
+        .box> p{
+            font-family: 'nova sans';
+        }
+        .texto{
+            font-family: 'tahoma'!important;/*O !important vai rescrever o desejado independente do nivel de expecificação do elemento*/
+        }
+        form  *{/*o * aplica a função global, então ate o texto digitado dentro da caixa de texto vai ser com a fonte expecificada*/
+            font-family: 'nova sans';
+        }
+    </style>
+</head>
+<body>
+    <h1>teste de fontes</h1>
+    <h2>Olá Mundo</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur sint autem id repellendus itaque quaerat ex enim quas, optio necessitatibus molestiae eligendi, aspernatur voluptatum soluta sunt, atque non iure adipisci!</p>
+
+    <div class="box">
+        <p class="texto">Olá Mundo</p>
+    </div>
+    <form action="Formulario">
+        <input type="text" name="texto" id="texto">
+    </form>
+</body>
+</html>

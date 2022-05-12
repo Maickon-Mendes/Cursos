@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayframes</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            position: relative;
+            background-color: lightgray;
+           
+        }
+
+        div.box:hover{
+             animation-name: animacao_1;
+            animation-duration: 2s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;/*quantidade de vezes que eu quero q a animação se repita*/
+        }
+
+        @keyframes animacao_1{
+            from{/*significa {DE 0%}*/
+                left: 0;
+                top: 0;
+                background-color: rgb(0, 255, 0);
+            }
+
+            25%{
+                left: 100px;
+                top: 100px;
+                background-color: orange;
+            }
+
+            to{/*significa {HÀ 100%}*/
+                left: 0px;
+                top: 0px;
+                background-color: rgb(0, 149, 241);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

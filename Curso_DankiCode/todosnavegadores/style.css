@@ -1,0 +1,11 @@
+body{
+    background-color: rgb(184, 184, 202);
+}
+/*estilização IE ou EDGE*/
+_:-ms-lang(x), body{background-color: black;}
+/*estilização apenas para mozila*/
+@-moz-document url-perfix(){
+    body{
+        background-color: green;
+    }
+}

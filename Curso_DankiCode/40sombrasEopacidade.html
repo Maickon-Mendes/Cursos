@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,body{
+            height: 100%;
+        }
+
+        div.box{
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+
+        div.box img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        div.box h1{
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            opacity: 0.4;
+            background-color: green;
+            text-align: center;
+            padding-top: 50px;
+            color: white;
+        }
+
+        div.box2{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin-top: 20px;
+
+        }
+
+        div.box2 img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        div.box2 h1{
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            transition: 1s;
+            background-color: green;
+            text-align: center;
+            padding-top: 50px;
+            color: white;
+        }
+
+        div.box2 h1:hover{
+            opacity: 0.4;
+        }
+
+
+        div.box3{
+            position: relative;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        div.box3 img{
+            left: 0;
+            top: 0;
+            width: 60%;
+            margin-bottom: 100px;
+            animation-name:animacao;
+            animation-duration: 5s;
+            box-shadow: 10px 10px 10px 5px rgba(9, 159, 185, 0.808);
+            animation-iteration-count: infinite;
+
+        }
+
+        @keyframes animacao{
+            0%{
+            box-shadow: 10px 10px 10px 5px rgba(9, 159, 185, 0.808);
+
+            }
+
+            50%{
+            box-shadow: 20px 20px 15px 5px rgba(9, 159, 185, 0.808);
+        }
+            100%{
+            box-shadow: 10px 10px 10px 5px rgba(9, 159, 185, 0.808);
+
+            }
+        }
+
+
+       
+        
+
+    </style>
+</head>
+<body>
+    <div class="box">
+    <img src="imagens/por do sol.jpg" alt="#">
+    <h1>Ola mundo</h1></div>
+
+    <div class="box2">
+        <img src="imagens/por do sol.jpg" alt="#">
+        <h1>Passe o mouse</h1></div>
+
+        <div class="box3">
+            <img src="imagens/por do sol.jpg" alt="#">
+            </div>
+
+            <!--www.cssmati.com/box-shaow  para escolher uma sombra -->
+</body>
+</html>

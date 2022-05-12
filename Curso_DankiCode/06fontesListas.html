@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body{
+            height: 100%;
+        }
+        body{
+                background-color: rgb(243, 240, 236);
+            }
+        div {
+            text-align: center;
+        }
+        .artigo{
+            width: 75%;/*max widh 1280px...para limitar o tamanho importante para tvs por exemplo*/
+            margin: 15px 15%;
+            line-height: 23px;/*espaçamento entre as linhas*/
+
+        }
+        h1 {
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 5px;/*espaçamento entre as letras*/
+        }
+        p{
+            width: 95%;/*maneiras de tornar o site responsivo*/
+            height: auto;
+            margin: 0px 15px;
+        }
+        .lista{
+            list-style-position: inside;
+            list-style:decimal-leading-zero;
+        }
+            .lista>li{
+            color: darkgrey;
+            margin-left: 25px;
+            padding-top: 15px;
+            }
+            .lista>li.item3{/*a prioridade é sempre do item mais expecificado*/
+                background-color: darkgrey;
+                color: black;
+            }
+    </style>
+</head>
+<body>
+    <div class='artigo'>
+        <h1>Fontes</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis ea accusantium labore molestias distinctio cumque excepturi autem et dignissimos voluptate voluptatum corrupti, doloremque suscipit fuga id error blanditiis optio reprehenderit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, dolor dolorum molestias nemo earum reiciendis repellendus pariatur, ad minima hic soluta! Aperiam consectetur molestiae, doloremque esse architecto magni quidem necessitatibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur vel illum mollitia veniam? Itaque dolore natus dolores voluptatum iste nam ullam adipisci dignissimos necessitatibus alias quidem, ipsum assumenda similique dolorum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque neque cumque doloribus quam quas. Illum facilis perferendis consequatur tenetur tempore praesentium soluta sapiente velit! Ab dolorum velit earum distinctio ipsa?</p>
+    </div>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis ea accusantium labore molestias distinctio cumque excepturi autem et dignissimos voluptate voluptatum corrupti, doloremque suscipit fuga id error blanditiis optio reprehenderit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, dolor dolorum molestias nemo earum reiciendis repellendus pariatur, ad minima hic soluta! Aperiam consectetur molestiae, doloremque esse architecto magni quidem necessitatibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur vel illum mollitia veniam? Itaque dolore natus dolores voluptatum iste nam ullam adipisci dignissimos necessitatibus alias quidem, ipsum assumenda similique dolorum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque neque cumque doloribus quam quas. Illum facilis perferendis consequatur tenetur tempore praesentium soluta sapiente velit! Ab dolorum velit earum distinctio ipsa?</p>
+    <ul class="lista">
+        <li>texto 1</li>
+        <li>texto 2</li>
+        <li class="item3">texto 3</li>
+        <li>texto 4</li>
+        <li>texto 5</li>
+    </ul>
+
+    
+</body>
+</html>

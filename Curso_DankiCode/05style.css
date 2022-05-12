@@ -1,0 +1,21 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: white;
+}
+.menu{/*quanto maior a especifidade do elemento o css vai considerar... e tambem o que vem por ultimo [e o q ele considera*/
+    width: 75%;
+    background-color: mediumspringgreen;
+    margin: 0 auto;/*espacamento externo*/
+    padding: 6px;
+        text-align: center;
+}
+
+.menu > a{
+    text-decoration: none;
+    margin: 0 10px;
+    color: black;
+    /*border(lado desejado): 3px solid green*/
+}

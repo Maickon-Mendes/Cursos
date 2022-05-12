@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div.box{
+            width: 200px;
+            padding: 20px 2%;
+            background-color: rgb(220, 220, 220);
+            position: relative;
+        }
+
+        .box h1{
+            word-wrap: break-word;/*para o texto quebrar no lugar expecificado do tamanho da box*/
+            display: inline;
+            border: 1px solid black;
+            color: #444;
+            
+        }
+
+        p{
+            width: 150px;
+            white-space: nowrap;/*propriedade para não quebrar as linhas (descer para linha de baixo ver sobre as outra white space edição de linhas e espaços no texto*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+       <h1>ola mundo</h1>
+    </div>
+    <p> ola mundo ola mundo ola mundo</p>
+    
+</body>
+</html>

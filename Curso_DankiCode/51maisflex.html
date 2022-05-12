@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .flex{
+            display: flex;
+        }
+
+        .gold{
+            background-color: gold;
+        }
+
+        .azulclaro{
+            background-color: #00a3d9;
+        }
+
+        section.container{
+            width: 100%;
+        }
+
+        div.flex{
+            flex-wrap: wrap;  /*apenas asim vai funcionar width:100%*/
+            max-width:960px;
+            display: flex;
+            margin: 0 auto;
+            padding: 0 2%;
+        }
+
+        .w33{
+            width: 33.3%;
+        }
+
+        .w50{
+            width: 50%;
+            /*width: 100%;  apenas asim vai funcionar width:100%*/
+        }
+
+        .w100{
+            width: 100%;
+        }
+
+        .order1{
+            order: 1;
+        }
+
+        .order2{
+            order: 2;
+        }
+
+        .order3{
+            order: 3;
+        }
+
+        .logo{
+            font-size: 23px;
+        }
+
+        header.topo-site{
+            padding: 20px 0;
+        }
+
+        header.topo-site ul li{
+            top: 5px;
+            padding: 0 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        header.topo-site ul li a{
+            color: black;
+            text-decoration: none;
+        }
+        .left{
+            text-align: left;
+        }
+
+        .rigth{
+            text-align: right;
+        }
+
+        .center{
+            text-align: center;
+        }
+
+        .slider{
+            min-height: 300px;
+            padding:30px 0;
+        }
+
+        .slider p{
+            top: 50%;
+            font-size:25px;
+            color: white;
+            position: relative;
+            display: inline-block;
+            text-transform: uppercase;
+            transform: translateY(-50%);
+            border-bottom: 2px solid white;
+        }
+
+        .promo{
+            padding: 20px 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            div.w50, div.w33{
+                width: 100%;
+                padding: 10px 0;
+            }
+
+            .left, .rigth{
+                text-align: center;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <section class="container">
+        <header class="gold topo-site">
+            <div class="flex">
+                <div class="w50 left logo">logoMarca</div>
+                <div class="w50 rigth">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Sobre</a></li>
+                        <li><a href="">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </section>
+
+    <section class="container azulclaro">
+        <div class="flex">
+            <div class="w100 center slider">
+                <p>meu texto para um site</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container promo">
+        <div class="flex">
+            <div class="w33 center order3">
+                <h2>titulo1</h2>
+                <p>descrição</p>
+            </div>
+            <div class="w33 center order2">
+                <h2>titulo2</h2>
+                <p>descrição</p>
+            </div>
+            <div class="w33 center order1">
+                <h2>titulo3</h2>
+                <p>descrição</p>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

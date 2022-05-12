@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .box{
+            width: calc((100% / 3) + 90px);
+            height: 90px;
+            background-color: red;
+        }
+        .xbox{
+            width: 100vw;/*viewport width = largura da viewport Obs. Não considera a scrollbar e tem um certo conflito com o sistema IOS*/
+            height: 100vh;/*viewport height = altura da viewport*/
+            background-color: chocolate;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="xbox"></div>
+</body>
+</html>

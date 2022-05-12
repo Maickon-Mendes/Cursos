@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type=file]{/*para que só apareça o texto na psgina */
+            display: none;
+        }
+        label{
+            margin: 20px auto;
+            font-size: 18px;
+            cursor: pointer;
+            display: block;/*label é display inLine, portanto não aceita dimenções*/
+            width: 220px;
+            height: 40px;
+            background-color: gray;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+        }
+        .select1{
+            text-align: center;
+            background-color: lightgrey;
+            padding: 30px;
+        }
+        select{/*PESQUISAR SOBRE WEBKIT e moz*/
+            background-image:url(imagens/coruja.png);
+            background-size: 30px 30px;
+            background-repeat: no-repeat;
+            background-position: 90%;
+            padding-left: 10px;
+            width: 220px;
+            height: 40px;
+            appearance: none; /*vai sumir a setinha que mostra item2*/
+            border: none;
+            /*webkit-appearance: none;   (para funcionar no google Chrome
+            -moz-appearance: none; (para funcionar no mozila
+            
+            select:: -ms-expand{
+                display:none (para funcionar no explore)
+            }*/
+        }
+        .labelchec{
+            display: none;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <form action="file">
+        <input type="file" name="file" id="file">
+        <label for="file">clique aqui</label><!--esta fazendo referencia ao style-->
+    </form>
+    <div class="select1">
+        <select name="#" id="#">
+            <option value="item1">item1</option>
+            <option value="item2">item2</option>
+        </select>
+    </div>
+
+    <div class="check">
+        <input type="checkbox" name="check1" id="check1">
+        <label class="labelchec" for="check1"></label>
+        <input type="checkbox" name="check2" id="check2">
+        <label class="labelchec" for="check2"></label>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    .transform{
+    transform: translate(-50%,-50%);/*para funcionar a centralização de uma div em porcentagem 1º valor é eixo X 2º é o eixo Y*/
+    width: 40%;
+    max-width: 300px;
+    height: 300px;
+    border: 1px solid rgb(14, 12, 12);
+    border-radius: 8px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transition: 2s;
+    background-color: rgb(204, 0, 255);
+    text-align: center;
+    }
+
+    .transform:hover{
+        transform: translate(-50%,-50%) rotate(45deg) scale(2,2);/* scaleX(2) scaleY(1) para rotacionar em algulos diferentes*/
+        /* transform: translate(-50%,-50%) rotateX(180deg) vai rotacionar até ficar de cabeça para baixo*/
+    }
+    </style>
+
+</head>
+<body>
+    <div class="transform"><h1>Passe o mouse</h1></div>   
+</body>
+</html>

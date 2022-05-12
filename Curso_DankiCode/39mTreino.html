@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .box1{
+            position: relative;
+            margin:300px 10px;
+            float: left;
+            width: 30px;
+            height: 30px;
+            background-color: orchid;
+            border-radius: 50%;
+            animation-name: animacao;
+            animation-duration: 0.8s;
+            animation-iteration-count: infinite;
+        }
+        .box2{
+            position: relative;
+            margin:300px 10px;
+            float: left;
+            width: 30px;
+            height: 30px;
+            background-color: palegreen;
+            border-radius: 50%;
+            animation-name: animacao;
+            animation-delay: 0.1s;
+            animation-duration: 0.8s;
+            animation-iteration-count: infinite;
+        }
+        .box3{
+            position: relative;
+            margin:300px 10px;
+            float: left;
+            width: 30px;
+            height: 30px;
+            background-color: paleturquoise;
+            border-radius: 50%;
+            animation-name: animacao;
+            animation-delay: 0.2s;
+            animation-duration: 0.8s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes animacao{
+            from{/*significa {DE 0%}*/
+                
+                bottom: 0;
+
+            }
+
+            25%{
+                
+                bottom:100px;
+
+            }
+
+            to{/*significa {HÀ 100%}*/
+                
+                bottom: 0;
+
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <style>
+        #myCanvas{
+            width: 800px;
+            height: 800px;
+            border: 2px solid red;
+        }
+    </style>
+    <canvas id="myCanvas">your brouser does not suport trhe html5 canvas tag </canvas>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(60,30,10,0,2*Math.PI);
+        ctx.stroke();
+    </script>
+</body>
+</html>

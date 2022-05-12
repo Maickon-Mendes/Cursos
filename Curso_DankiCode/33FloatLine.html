@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;/*nescessario para os 33.3% funcionem*/
+        }
+        html,body{
+            padding: 30px 0;
+            height: 100%;/*altura*/
+        }
+        .container{
+            background-color: lightgray;
+            text-align: center;
+            overflow: hidden;/*para que não apreça a scrollbar*/
+        }
+        .box{
+            width: 33.33%;/*largura*/
+            height: 300px;/*altura*/
+            background-color: lightblue;
+            display: inline-block;
+            margin-right: -4px; /*o inline block tem por padrão um espaçamento, é necessario acrecentar isso para que funcione*/
+            margin-bottom: -4px;/*o inline block tem por padrão um espaçamento, é necessario acrecentar isso para que funcione*/
+            border: 1px solid black;
+            max-width: 300px;
+        }
+
+        .box:last-child{
+            margin-right: 0;
+        }
+
+
+        @media screen and (max-width:768px) {/*Quando o tamnho da minha tela for de 768px, quero que cada box tenha uma largura de 40% e que o container fiquie alinhado no centro*/
+        .box{
+            width: 50%;
+        }
+        .box:nth-of-type(2){
+            margin-right: 0;
+        }
+    }
+
+        @media screen and (max-width:580px) {
+            .box{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box"></div>
+   <div class="box"></div>
+    <div class="box"></div>
+</div>
+</body>
+</html>

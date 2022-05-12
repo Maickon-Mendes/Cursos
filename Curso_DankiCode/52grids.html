@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="bt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            grid-template-columns: 1fr 1fr 1fr;
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            padding: 0 2%;
+            grid-gap: 5px;
+            margin-bottom: 50px;
+        }
+
+        .col{
+            padding: 15px;
+            background-color: lightgrey;
+        }
+
+        .w100{
+            grid-column: 1/4;
+            background-color: lightpink;
+        }
+
+        .container2{ 
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            padding: 0 2%;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas: 
+            "header header"
+            "content content2"
+            "footer footer";
+        }
+
+        .header{grid-area: header;}
+        .footer{grid-area: footer;}
+        .content{grid-area: content;}
+        .content2{grid-area: content2;}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col ">Ola, mundo!</div>
+        <div class="col ">Ola, mundo!</div>
+        <div class="col w100">Ola, mundo!</div>
+        <div class="col">Ola, mundo!</div>
+        <div class="col">Ola, mundo!</div>
+        <div class="col">Ola, mundo!</div>
+    </div>
+
+    <div class="container2">
+        <div class="header">
+            <h2>header</h2>
+        </div>
+        <div class="content">
+            <p>conteudo</p>
+        </div>
+        <div class="content2">
+            <p>conteudo</p>
+        </div>
+        <div class="footer">
+            <h2>footer</h2>
+        </div>
+    </div>
+    
+</body>
+</html>
